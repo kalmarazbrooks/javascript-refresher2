@@ -35,3 +35,16 @@ for (let a = 0; a < suits.length; a++) {
 }
 
 console.table(cards)
+
+// Exercise 3
+
+let drawn1 = drawCard()[0]
+let drawn2 = drawCard()[0]
+
+console.table(cards)
+console.log(`${drawn1.rank} of ${drawn1.suit}`)
+console.log(`${drawn2.rank} of ${drawn2.suit}`)
+
+function drawCard() {
+    return cards.splice(Math.floor(Math.random() * cards.length), 1)
+}
